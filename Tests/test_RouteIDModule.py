@@ -1,11 +1,8 @@
 import unittest
 import sys
-sys.path.append('../Modules')
-import RouteIDModule
+from Modules import RouteIDModule
 
-class RouteIDModuleTest(unittest.TestCase):
-
-
+class test_RouteIDModule(unittest.TestCase):
     def test_getRouteID_valid(self):
         self.assertEqual(RouteIDModule.getRouteID('METRO Red Line'),'903' )
 

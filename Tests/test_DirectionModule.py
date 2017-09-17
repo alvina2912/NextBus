@@ -1,11 +1,8 @@
 import unittest
 import sys
-sys.path.append('../Modules')
-import DirectionModule
+from Modules import DirectionModule
 
-class DirectionModuleTest(unittest.TestCase):
-
-
+class test_DirectionModule(unittest.TestCase):
     def test_getDirectionValue_valid(self):
         self.assertEqual(DirectionModule.getDirectionValue('903','north'),'4' )
 

@@ -1,11 +1,8 @@
 import unittest
 import sys
-sys.path.append('../Modules')
-import TransitStopModule
+from Modules import TransitStopModule
 
-class TransitStopModuleTest(unittest.TestCase):
-
-
+class test_TransitStopModule(unittest.TestCase):
     def test_getStopValue_valid(self):
         self.assertEqual(TransitStopModule.getStopValue('903','4','147th St Station'),'CE47' )
 

@@ -1,10 +1,9 @@
 import sys
 import time
-sys.path.append('Modules')
-import RouteIDModule
-import DirectionModule
-import TransitStopModule
-import TransitTimeModule
+from Modules import RouteIDModule
+from Modules import DirectionModule
+from Modules import TransitStopModule
+from Modules import TransitTimeModule
 
 arguments = sys.argv
 
@@ -46,4 +45,4 @@ else:
     except SystemExit:
         pass
     except:
-        print "There was an error compliting your request, please try again later"
+        print "There was an error completing your request, please try again later"
