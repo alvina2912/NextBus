@@ -15,7 +15,6 @@ else:
         busRoute=arguments[1]
         busStop=arguments[2]
         direction=arguments[3]
-
         routeID = RouteIDModule.getRouteID(busRoute)
 
         if routeID == None:
@@ -27,6 +26,7 @@ else:
         if directionValue == None:
             print "Bus Direction "+direction+" not found"
             sys.exit()
+
         stopValue=TransitStopModule.getStopValue(routeID,directionValue,busStop)
 
         if stopValue == None:
@@ -34,14 +34,15 @@ else:
             sys.exit()
 
         timeValue = TransitTimeModule.getTime(routeID,directionValue,stopValue)
+
         if timeValue == None :
             print "Last bus for the day has already left"
             sys.exit()
         else:
             timeValue = timeValue[6:19]
-            EpochTimeDifference = float(timeValue)-(float(time.time())*1000)
-            MinuteTimeDifference = (EpochTimeDifference/(1000*60))
-            print str(int(round(MinuteTimeDifference))) +' Minutes'
+            epochTimeDifference = float(timeValue)-(float(time.time())*1000)
+            minuteTimeDifference = (epochTimeDifference/(1000*60))
+            print str(int(round(minuteTimeDifference))) +' Minutes'
     except SystemExit:
         pass
     except:

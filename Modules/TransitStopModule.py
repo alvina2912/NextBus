@@ -5,7 +5,6 @@ import Constants
 stopUrl=Constants.BASE_URL+"Stops/{}/{}?format=json"
 
 def getStopValue(routeID,DirectionValue,busStop):
-
     StopUrl=stopUrl.format(routeID,DirectionValue)
     uh = urllib.urlopen(StopUrl)
     data = uh.read()
