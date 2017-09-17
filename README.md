@@ -12,6 +12,15 @@ $ python NextBus.py 'METRO Green Line' 'Target Field Station Platform 1' 'EAST'
 
 The above command will run NextBus and will tell you how long it is until the next bus
 
+##  Output
+
+4 Minutes
+
+## Running Test
+```
+$ python -m unittest discover Tests
+```
+
 ## About the app
 
 1. The app uses [NexTrip API](http://svc.metrotransit.org/) to retrieve bus information.
@@ -23,13 +32,3 @@ The above command will run NextBus and will tell you how long it is until the ne
       * __busRoute*__ : A substring of the bus route name which is only in one bus route
       * __busStop*__ :A substring of the bus stop name which is only in one bus stop on that route
       * __direction*__ : can be “north” “east” “west” or “south”
-
-
-##  Output
-
-4 Minutes
-
-## Running Test
-```
-$ python -m unittest discover Tests
-```
